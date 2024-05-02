@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+    <!-- Define Java versions -->
+    <variable>
+        <name>Java</name>
+        <version>
+            <name>1.8.0_74</name>
+            <path>/u01/users/softs/Ekip-Softs/PosteDeveloppeur360/1-jdk/jdk1.8.0_74_64b</path>
+            <options>-Xms2048m -Xmx3096m -XX:PermSize=1024m -XX:MaxPermSize=2048m -Djavax.xml.accessExternalSchema=all</options>
+        </version>
+        <version>
+            <name>1.6.0_23</name>
+            <path>/u01/users/softs/Ekip-Softs/Chrysalide/PosteDeveloppeur/1-jdk/jdk-1.6.0_23</path>
+            <options>-Xms2048m -Xmx3096m -XX:PermSize=1024m -XX:MaxPermSize=2048m -Djavax.xml.accessExternalSchema=all</options>
+        </version>
+        <version>
+            <name>11.0.14.01</name>
+            <path>/u01/users/softs/EPOS360/jdk-11.0.14.1+1</path>
+            <options>-Xms2048m -Xmx3096m -XX:PermSize=1024m -XX:MaxPermSize=2048m -Djavax.xml.accessExternalSchema=all</options>
+        </version>
+        <version>
+            <name>11.0.19.7</name>
+            <path>http://hudson.cf.linedata.com/softs/1-jdk/java-11-openjdk-11.0.19.7-1.windows.redhat.x86_64.zip</path>
+            <options>-Xms2048m -Xmx3096m -XX:PermSize=1024m -XX:MaxPermSize=2048m -Djavax.xml.accessExternalSchema=all</options>
+        </version>
+        <!-- Add more Java versions here -->
+    </variable>
+
+    <!-- Define Maven versions -->
+    <variable>
+        <name>Maven</name>
+        <version>
+            <name>3.2.5</name>
+            <path>http://hudson.cf.linedata.com/softs/3-Maven/apache-maven-3.2.5-bin.zip</path>
+        </version>
+        <version>
+            <name>3.5.2</name>
+            <path>\\esope\Credits\CFClientsPMO\02_CLIENTS\MERCEDES(MBFS)\Projet_Winfi360\TOOLS\apache-maven-3.5.2</path>
+        </version>
+        <version>
+            <name>3.0.2</name>
+            <path>/u01/users/softs/Ekip-Softs/Chrysalide/PosteDeveloppeur/3-Maven/apache-maven-3.0.4-bin.zip</path>
+        </version>
+<!--    <version>
+            <name>3.6.3</name>
+            <path>/u01/users/softs/EPOS360/apache-maven-3.6.3</path>
+        </version> -->
+        <version>
+            <name>3.0.4</name>
+            <path>/u01/users/softs/EPOS360/apache-maven-3.0.4</path>
+        </version>
+        <version>
+            <name>3.6.3</name>
+            <path>http://hudson.cf.linedata.com/softs/3-Maven/apache-maven-3.6.3-bin.zip</path>
+        </version>
+        <!-- Add more Maven versions here -->
+    </variable>
+
+    <!-- Define Eclipse versions -->
+    <variable>
+        <name>Eclipse</name>
+        <version>
+            <name>Luna</name>
+            <path>/u01/users/softs/Ekip-Softs/PosteDeveloppeur360/4-Eclipse (Java)/eclipse-jee-luna-SR2-win32-x86_64.zip</path>
+        </version>
+        <version>
+            <name>2019</name>
+            <path>/u01/users/softs/EPOS360/eclipse-2019.zip</path>
+        </version>
+        <version>
+            <name>Helios</name>
+            <path>/u01/users/softs/Ekip-Softs/Chrysalide/PosteDeveloppeur/4-Eclipse (Java)/eclipse</path>
+        </version>
+        <version>
+            <name>2021-09</name>
+            <path>http://hudson.cf.linedata.com/softs/4-Eclipse/eclipse-jee-2021-09-R-win32-x86_64.zip</path>
+        </version>
+		<!--  cette version non operationelle
+        <version>
+            <name>2022-06</name>
+            <path>http://hudson.cf.linedata.com/softs/4-Eclipse/eclipse-jee-2022-06-R-win32-x86_64.zip</path>
+        </version> -->
+        <!-- Add more Eclipse versions here -->
+    </variable>
+
+    <!-- Define Tomcat versions -->
+    <variable>
+        <name>Tomcat</name>
+        <version>
+            <name>6.0.26</name>
+            <path>/u01/users/softs/Ekip-Softs/Chrysalide/PosteDeveloppeur/12-tomcat/apache-tomcat-6.0.26/apache-tomcat-6.0.26</path>
+        </version>
+        <version>
+            <name>7.0.42</name>
+            <path>/u01/users/softs/Ekip-Softs/Chrysalide/PosteDeveloppeur/12-tomcat/apache-tomcat-7.0.42-windows-x64.zip</path>
+        </version>
+        <version>
+            <name>9.0.58</name>
+            <path>/u01/users/softs/EPOS360/apache-tomcat-9.0.58</path>
+        </version>
+        <!-- Add more Tomcat versions here -->
+    </variable>
+
+    <!-- Define installations -->
+	<project name="UNILOAN">
+		<installation name="STD">
+			<version name="UNILOAN_NG">
+				<Java>11.0.19.7</Java>
+				<Maven>3.6.3</Maven>
+				<Eclipse>Luna</Eclipse>
+				<Tomcat>9.0.58</Tomcat>
+				<Gits>
+					<Git>
+						<name>Standard</name>
+						<repository>http://git.cf.linedata.com/gitblit/r/uniloan/uniloan-appl.git</repository>
+						<branch>master</branch>
+						<linkedApplications>
+							<linkedApplication>
+								<name>uniloan360-gui</name>
+							</linkedApplication>
+						</linkedApplications>
+					</Git>
+				</Gits>
+				<JBPM>false</JBPM>
+				<Applications>
+					<Application>
+						<name>uniloan360-gui</name>
+						<serverType>newTomcat</serverType>
+					</Application>
+				</Applications>
+			</version>
+		</installation>
+	</project>	
+	<project name="TAF">
+        <installation name="AncienFW">
+            <version name="Basic">
+                <Java>1.8.0_74</Java>
+                <Maven>3.2.5</Maven>
+                <Eclipse>2021-09</Eclipse>
+                <Tomcat>7.0.42</Tomcat>
+                <Gits>
+                    <Git>
+                        <name>Standard</name>
+                        <repository>http://git.cf.linedata.com/gitblit/r/industrie/taf-appl.git</repository>
+                        <branch>master</branch>
+                        <linkedApplications>
+                            <linkedApplication>
+                                <name>taf360-dev-gui</name>
+                            </linkedApplication>
+                        </linkedApplications>
+                    </Git>
+                </Gits>
+                <JBPM>true</JBPM>
+                <Applications>
+                    <Application>
+                        <name>taf360-dev-gui</name>
+                        <serverType>jetty</serverType>
+                    </Application>
+                </Applications>
+            </version>
+        </installation>
+    </project>
+    <project name="EKIP">
+        <installation name="Nissan">
+            <version name="Basic">
+                <Java>1.8.0_74</Java>
+                <Maven>3.2.5</Maven>
+                <Eclipse>2021-09</Eclipse>
+                <Tomcat>7.0.42</Tomcat>
+                <Gits>
+                    <Git>
+                        <name>Standard</name>
+                        <repository>http://git.cf.linedata.com/gitblit/r/nissan/nrfm-ekip-appl.git</repository>
+                        <branch>B_1_1_11</branch>
+                        <linkedApplications>
+                            <linkedApplication>
+                                <name>ekip360-dev-gui</name>
+                            </linkedApplication>
+                        </linkedApplications>
+                    </Git>
+                </Gits>
+                <JBPM>true</JBPM>
+                <Applications>
+                    <Application>
+                        <name>ekip360-dev-gui</name>
+                        <serverType>jetty</serverType>
+                    </Application>
+                </Applications>
+            </version>
+        </installation>
+    </project>
+    <project name="EPOS">
+        <installation name="TFF">
+            <version name="EVOL">
+                <Java>1.8.0_74</Java>
+                <Maven>3.2.5</Maven>
+                <Eclipse>2021-09</Eclipse>
+                <Tomcat>7.0.42</Tomcat>
+                <Gits>
+                    <Git>
+                        <name>Standard</name>
+                        <repository>http://git.cf.linedata.com/gitblit/git/epos/epos-appl.git</repository>
+                        <branch>B_4_3</branch>
+                        <linkedApplications>
+                            <linkedApplication>
+                                <name>epos360-setup-gui</name>
+                            </linkedApplication>
+                            <linkedApplication>
+                                <name>epos360-front-ws</name>
+                            </linkedApplication>
+                        </linkedApplications>
+                    </Git>
+                    <Git>
+                        <name>Specific</name>
+                        <repository>http://git.cf.linedata.com/gitblit/git/toyota/tff-epos-appl.git</repository>
+                        <branch>master</branch>
+                        <linkedApplications>
+                            <linkedApplication>
+                                <name>epos360-gui</name>
+                            </linkedApplication>
+                            <linkedApplication>
+                                <name>epos360-front-ws</name>
+                            </linkedApplication>
+                        </linkedApplications>
+                    </Git>
+                </Gits>
+                <JBPM>true</JBPM>
+                <Applications>
+                    <Application>
+                        <name>epos360-gui</name>
+                        <serverType>jetty</serverType>
+                    </Application>
+                    <Application>
+                        <name>epos360-setup-gui</name>
+                        <serverType>tomcat</serverType>
+                    </Application>
+                    <Application>
+                        <name>epos360-front-ws</name>
+                        <serverType>tomcat</serverType>
+                    </Application>
+                </Applications>
+            </version>
+
+            <version name="PROD">
+                <Java>1.8.0_74</Java>
+                <Maven>3.2.5</Maven>
+                <Eclipse>2021-09</Eclipse>
+                <Tomcat>7.0.42</Tomcat>
+                <Gits>
+                    <Git>
+                        <name>Standard</name>
+                        <repository>http://git.cf.linedata.com/gitblit/git/epos/epos-appl.git</repository>
+                        <branch>B_4_3_44</branch>
+                    </Git>
+                    <Git>
+                        <name>Specific</name>
+                        <repository>http://git.cf.linedata.com/gitblit/git/toyota/tff-epos-appl.git</repository>
+                        <branch>B_1_11</branch>
+                    </Git>
+                </Gits>
+                <JBPM>true</JBPM>
+                <Applications>
+                    <Application>
+                        <name>epos360-gui</name>
+                        <serverType>jetty</serverType>
+                    </Application>
+                </Applications>
+            </version>
+        </installation>
+
+        <installation name="STD">
+            <version name="EPOSNG">
+                <Java>11.0.19.7</Java>
+                <Maven>3.6.3</Maven>
+                <Eclipse>2021-09</Eclipse>
+                <Tomcat>9.0.58</Tomcat>
+                <Gits>
+                    <Git>
+                        <name>Standard</name>
+                        <repository>http://git.cf.linedata.com/gitblit/git/epos/epos-appl.git</repository>
+                        <branch>master</branch>
+                        <linkedApplications>
+                            <linkedApplication>
+                                <name>epos360-gui</name>
+                            </linkedApplication>
+                        </linkedApplications>
+                    </Git>
+                </Gits>
+                <JBPM>true</JBPM>
+                <Applications>
+                    <Application>
+                        <name>epos360-gui</name>
+                        <serverType>newTomcat</serverType>
+                    </Application>
+                </Applications>
+            </version>
+            <version name="EPOSSTD">
+                <Java>1.8.0_74</Java>
+                <Maven>3.2.5</Maven>
+                <Eclipse>2021-09</Eclipse>
+                <Tomcat>7.0.42</Tomcat>
+                <Gits>
+                    <Git>
+                        <name>Standard</name>
+                        <repository>http://git.cf.linedata.com/gitblit/git/epos/epos-appl.git</repository>
+                        <branch>B_4</branch>
+                    </Git>
+                </Gits>
+                <JBPM>true</JBPM>
+                <Applications>
+                    <Application>
+                        <name>epos360-gui</name>
+                        <serverType>tomcat</serverType>
+                    </Application>
+                </Applications>
+            </version>
+        </installation>
+
+        <installation name="WINFI">
+            <version name="REC">
+                <Java>1.8.0_74</Java>
+                <Maven>3.6.3</Maven>
+                <Eclipse>2021-09</Eclipse>
+                <Tomcat>7.0.42</Tomcat>
+                <Gits>
+                    <Git>
+                        <name>Standard</name>
+                        <repository>http://gitmbfs.cf.linedata.com/gitblit/r/mbfs/winfi-appl.git</repository>
+                        <branch>B_4_3</branch>
+                    </Git>
+                </Gits>
+                <JBPM>true</JBPM>
+                <Applications>
+                    <Application>
+                        <name>winfi360-appl</name>
+                        <serverType>jetty</serverType>
+                    </Application>
+                </Applications>
+            </version>
+            <version name="NEW">
+                <Java>1.8.0_74</Java>
+                <Maven>3.6.3</Maven>
+                <Eclipse>2021-09</Eclipse>
+                <Tomcat>7.0.42</Tomcat>
+                <Gits>
+                    <Git>
+                        <name>Standard</name>
+                        <repository>http://gitmbfs.cf.linedata.com/gitblit/r/mbfs/winfi-appl.git</repository>
+                        <branch>master</branch>
+                    </Git>
+                </Gits>
+                <JBPM>true</JBPM>
+                <Applications>
+                    <Application>
+                        <name>winfi360-appl</name>
+                        <serverType>jetty</serverType>
+                    </Application>
+                </Applications>
+            </version>
+        </installation>
+
+
+        <installation name="WFS">
+            <version name="HEAD">
+                <Java>1.6.0_23</Java>
+                <Maven>3.2.5</Maven>
+                <Eclipse>2021-09</Eclipse>
+                <Tomcat>6.0.26</Tomcat>
+                <Gits>
+                    <Git>
+                        <name>Standard</name>
+                        <repository>http://git.cf.linedata.com/gitblit/git/epos/epos-appl.git</repository>
+                        <branch>B_WFS_2</branch>
+                    </Git>
+                </Gits>
+                <JBPM>true</JBPM>
+                <Applications>
+                    <Application>
+                        <name>ekip-pos360-standard-gui</name>
+                        <serverType>jetty</serverType>
+                    </Application>
+                </Applications>
+            </version>
+            <version name="PROD">
+                <Java>1.6.0_23</Java>
+                <Maven>3.2.5</Maven>
+                <Eclipse>2021-09</Eclipse>
+                <Tomcat>6.0.26</Tomcat>
+                <Gits>
+                    <Git>
+                        <name>Standard</name>
+                        <repository>http://git.cf.linedata.com/gitblit/git/epos/epos-appl.git</repository>
+                        <branch>B_WFS_2_0_112</branch>
+                    </Git>
+                </Gits>
+                <JBPM>true</JBPM>
+                <Applications>
+                    <Application>
+                        <name>ekip-pos360-standard-gui</name>
+                        <serverType>jetty</serverType>
+                    </Application>
+                </Applications>
+            </version>
+        </installation>
+
+        <installation name="WFB">
+            <version name="PROD">
+                <Java>1.8.0_74</Java>
+                <Maven>3.2.5</Maven>
+                <Eclipse>2021-09</Eclipse>
+                <Tomcat>7.0.42</Tomcat>
+                <Gits>
+                    <Git>
+                        <name>Standard</name>
+                        <repository>http://git.cf.linedata.com/gitblit/git/epos/epos-appl.git</repository>
+                        <branch>B_WFB_MASTER</branch>
+                        <linkedApplications>
+                            <linkedApplication>
+                                <name>ekip-pos360-standard-gui</name>
+                            </linkedApplication>
+                            <linkedApplication>
+                                <name>ekip-pos-gui-setup</name>
+                            </linkedApplication>
+                            <linkedApplication>
+                                <name>ekip-pos360-standard-ws</name>
+                            </linkedApplication>
+                        </linkedApplications>
+                    </Git>
+                </Gits>
+                <JBPM>true</JBPM>
+                <Applications>
+                    <Application>
+                        <name>ekip-pos360-standard-gui</name>
+                        <serverType>jetty</serverType>
+                    </Application>
+                    <Application>
+                        <name>ekip-pos-gui-setup</name>
+                        <serverType>tomcat</serverType>
+                    </Application>
+                    <Application>
+                        <name>ekip-pos360-standard-ws</name>
+                        <serverType>tomcat</serverType>
+                    </Application>
+                </Applications>
+            </version>
+        </installation>
+
+        <installation name="SOFAC">
+            <version name="EVOL">
+                <Java>1.8.0_74</Java>
+                <Maven>3.2.5</Maven>
+                <Eclipse>2021-09</Eclipse>
+                <Tomcat>7.0.42</Tomcat>
+                <Gits>
+                    <Git>
+                        <name>Standard</name>
+                        <repository>http://git.cf.linedata.com/gitblit/git/epos/epos-appl.git</repository>
+                        <branch>B_4_2</branch>
+                        <linkedApplications>
+                            <linkedApplication>
+                                <name>epos360-setup-gui</name>
+                            </linkedApplication>
+                            <linkedApplication>
+                                <name>epos360-front-ws</name>
+                            </linkedApplication>
+                        </linkedApplications>
+                    </Git>
+                    <Git>
+                        <name>Specific</name>
+                        <repository>http://git.cf.linedata.com/gitblit/r/sofac/sof-epos-appl.git</repository>
+                        <branch>master</branch>
+                        <linkedApplications>
+                            <linkedApplication>
+                                <name>epos360-gui</name>
+                            </linkedApplication>
+                            <linkedApplication>
+                                <name>epos360-front-ws</name>
+                            </linkedApplication>
+                        </linkedApplications>
+                    </Git>
+                </Gits>
+                <JBPM>true</JBPM>
+                <Applications>
+                    <Application>
+                        <name>epos360-setup-gui</name>
+                        <serverType>tomcat</serverType>
+                    </Application>
+                    <Application>
+                        <name>epos360-gui</name>
+                        <serverType>jetty</serverType>
+                    </Application>
+                    <Application>
+                        <name>epos360-front-ws</name>
+                        <serverType>tomcat</serverType>
+                    </Application>
+                </Applications>
+
+            </version>
+        </installation>
+
+        <installation name="BKCF">
+            <version name="PROD">
+                <Java>1.8.0_74</Java>
+                <Maven>3.2.5</Maven>
+                <Eclipse>2021-09</Eclipse>
+                <Tomcat>7.0.42</Tomcat>
+                <Gits>
+                    <Git>
+                        <name>Standard</name>
+                        <repository>http://git.cf.linedata.com/gitblit/git/epos/epos-appl.git</repository>
+                        <branch>B_3</branch>
+                    </Git>
+                    <Git>
+                        <name>Specific</name>
+                        <repository>http://git.cf.linedata.com/gitblit/r/bkcf/bkcf-epos-appl.git</repository>
+                        <branch>master</branch>
+                    </Git>
+                </Gits>
+                <JBPM>true</JBPM>
+                <Applications>
+                    <Application>
+                        <name>ekip-pos360-gui</name>
+                        <serverType>jetty</serverType>
+                    </Application>
+                </Applications>
+            </version>
+        </installation>
+    </project>
+
+    <!-- Define workingsets -->
+    <workingSets>
+        <workingSet>
+            <name>Services&amp;Tools</name>
+            <keywords>
+                <keyword>services</keyword>
+                <keyword>tools</keyword>
+            </keywords>
+        </workingSet>
+        <workingSet>
+            <name>GUI</name>
+            <keywords>
+                <keyword>gui</keyword>
+            </keywords>
+        </workingSet>
+        <workingSet>
+            <name>Interfaces</name>
+            <keywords>
+                <keyword>interfaces</keyword>
+            </keywords>
+        </workingSet>
+        <workingSet>
+            <name>Batches</name>
+            <keywords>
+                <keyword>batches</keyword>
+            </keywords>
+        </workingSet>
+        <workingSet>
+            <name>epos360</name>
+            <keywords>
+                <keyword>epos360</keyword>
+            </keywords>
+        </workingSet>
+        <!-- Add more working sets here -->
+    </workingSets>
+
+    <!-- Add more installations here -->
+</configurations>
