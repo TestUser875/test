@@ -75,11 +75,11 @@
             <name>2021-09</name>
             <path>http://hudson.cf.linedata.com/softs/4-Eclipse/eclipse-jee-2021-09-R-win32-x86_64.zip</path>
         </version>
-		<!--  cette version non operationelle
+		
         <version>
             <name>2022-06</name>
             <path>http://hudson.cf.linedata.com/softs/4-Eclipse/eclipse-jee-2022-06-R-win32-x86_64.zip</path>
-        </version> -->
+        </version>
         <!-- Add more Eclipse versions here -->
     </variable>
 
