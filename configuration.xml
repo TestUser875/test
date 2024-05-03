@@ -107,7 +107,7 @@
 			<version name="UNILOAN_NG">
 				<Java>11.0.19.7</Java>
 				<Maven>3.6.3</Maven>
-				<Eclipse>2022-06</Eclipse>
+				<Eclipse>2021-09</Eclipse>
 				<Tomcat>9.0.58</Tomcat>
 				<Gits>
 					<Git>
@@ -194,7 +194,7 @@
             <version name="EVOL">
                 <Java>1.8.0_74</Java>
                 <Maven>3.2.5</Maven>
-                <Eclipse>2021-09</Eclipse>
+                <Eclipse>2022-06</Eclipse>
                 <Tomcat>7.0.42</Tomcat>
                 <Gits>
                     <Git>
