@@ -194,7 +194,7 @@
             <version name="EVOL">
                 <Java>1.8.0_74</Java>
                 <Maven>3.2.5</Maven>
-                <Eclipse>Luna</Eclipse>
+                <Eclipse>2022-06</Eclipse>
                 <Tomcat>7.0.42</Tomcat>
                 <Gits>
                     <Git>
