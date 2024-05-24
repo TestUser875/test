@@ -77,7 +77,7 @@
         </version>
 		
         <version>
-            <name>2021-09</name>
+            <name>2022-06</name>
             <path>http://hudson.cf.linedata.com/softs/4-Eclipse/eclipse-jee-2022-06-R-win32-x86_64.zip</path>
         </version>
         <!-- Add more Eclipse versions here -->
@@ -194,7 +194,7 @@
             <version name="EVOL">
                 <Java>1.8.0_74</Java>
                 <Maven>3.2.5</Maven>
-                <Eclipse>2022-06</Eclipse>
+                <Eclipse>2021-09</Eclipse>
                 <Tomcat>7.0.42</Tomcat>
                 <Gits>
                     <Git>
